@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/stylesheets/common.css">
+	<link rel="stylesheet" type="text/css" href="style/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="style/stylesheets/index.css">
+</head>
+<body>
+	<div class="content">
+		<section>
+			<div class="banner">
+				<div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+				            <a  href="#this"><img width="100%" src="http://img10.360buyimg.com/da/jfs/t2890/21/294370444/194012/2dfbcf6e/570ce358N101819ad.jpg" alt=""></a>
+                        </div>
+				        <div class="swiper-slide">
+				            <a  href="#this"><img width="100%" src="http://img10.360buyimg.com/da/jfs/t2890/21/294370444/194012/2dfbcf6e/570ce358N101819ad.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+				            <a  href="#this"><img width="100%" src="http://img10.360buyimg.com/da/jfs/t2890/21/294370444/194012/2dfbcf6e/570ce358N101819ad.jpg" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+				            <a  href="#this"><img width="100%" src="http://img10.360buyimg.com/da/jfs/t2890/21/294370444/194012/2dfbcf6e/570ce358N101819ad.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+			</div>
+		</section>
+		<section>
+			<ul class="content-list">
+				<li class="item-col">
+					<a href=""><img src="http://img20.360buyimg.com/da/jfs/t2872/258/350056304/17306/82fb9592/570f0642N4924c5c4.jpg" alt="" width="100%"></a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<div class="conent-suggest">
+				<div class="suggest-title">
+					<h2>推荐</h2>
+					<a href="" class="more">更多</a>
+				</div>
+				<ul class="goodlist">
+                    {{ each products }}
+					<li class="item-col"><a href="/product/{{ $value.id }}">
+						<img src="{{ $value.imgsrc }}" alt="" width="100%">
+						<p class="title">{{ $value.title }}</p>
+						<p class="price">&yen;<strong>{{ $value.price }}</strong></p>
+					</a></li>
+					{{ /each }}
+				</ul>
+			</div>
+		</section>
+	</div>
+	<div id="footer">
+		<ul>
+			<li class="menuitem curr"><a href=""><i class="icon iconfont">&#xe602;</i><p>首页</p></a></li>
+			<li class="menuitem"><a href=""><i class="icon iconfont">&#xe601;</i><p>购物车</p></a></li>
+			<li class="menuitem center"><a href=""><span><i class="icon iconfont">&#xe603;</i></span><p>积分商城</p></a></li>
+			<li class="menuitem"><a href=""><i class="icon iconfont">&#xe600;</i><p>家人说</p></a></li>
+			<li class="menuitem"><a href=""><i class="icon iconfont">&#xe604;</i><p>我</p></a></li>
+		</ul>
+	</div>
+</body>
+<script src="js/swiper.min.js"></script>
+<script>
+    // $(function () {
+        //初始化轮播图
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 3500,
+            autoplayDisableOnInteraction: false
+        });
+    // })
+</script>
+</html>

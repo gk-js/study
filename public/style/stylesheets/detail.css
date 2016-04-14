@@ -1,0 +1,193 @@
+/* line 6, ../sass/detail.scss */
+body {
+  background: #F0EFF4;
+}
+
+/* line 9, ../sass/detail.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  min-height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #ddd;
+  z-index: 50;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 22, ../sass/detail.scss */
+header .backbutton, header .cartbutton {
+  width: 13%;
+  text-align: center;
+  color: #e3393c;
+  display: block;
+  font-size: 1.75rem !important;
+}
+/* line 29, ../sass/detail.scss */
+header .cartbutton {
+  position: relative;
+}
+/* line 31, ../sass/detail.scss */
+header .cartbutton .cartnum {
+  position: absolute;
+  left: 50%;
+  bottom: 37%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #e3393c;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 20px;
+  border: 2px solid #fff;
+}
+/* line 46, ../sass/detail.scss */
+header h1 {
+  text-align: center;
+  color: #e3393c;
+  width: 74%;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+/* line 54, ../sass/detail.scss */
+.content {
+  padding-top: 44px;
+  padding-bottom: 50px;
+}
+/* line 57, ../sass/detail.scss */
+.content .bannerImg {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+/* line 61, ../sass/detail.scss */
+.content .bannerImg .index-icon {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+/* line 67, ../sass/detail.scss */
+.content .bannerImg .index-icon i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #6a6666;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 75, ../sass/detail.scss */
+.content .bannerImg .index-icon .curr {
+  background: #e3393c;
+}
+/* line 81, ../sass/detail.scss */
+.content .detailbox .specification {
+  padding: 3%;
+  background: #fff;
+}
+/* line 85, ../sass/detail.scss */
+.content .detailbox .col-item {
+  padding: 0.875rem 0;
+  border-bottom: 1px solid #ddd;
+  *zoom: 1;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+/* line 22, c:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.content .detailbox .col-item:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 92, ../sass/detail.scss */
+.content .detailbox .col-select {
+  font-size: 0.875rem;
+  font-weight: normal;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 98, ../sass/detail.scss */
+.content .detailbox .col-select .sizetit {
+  width: 3.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+}
+/* line 104, ../sass/detail.scss */
+.content .detailbox .col-select .sizelist li {
+  display: inline-block;
+}
+/* line 107, ../sass/detail.scss */
+.content .detailbox .col-select .sizelist .item {
+  float: left;
+  line-height: 1.75rem;
+  padding: 0 0.75rem;
+  border: 1px solid #ddd;
+  margin: 0 10px 5px 0;
+}
+/* line 114, ../sass/detail.scss */
+.content .detailbox .col-select .sizelist .item.curr {
+  border-color: #e3393c;
+  background: #e3393c;
+  color: #fff;
+}
+/* line 120, ../sass/detail.scss */
+.content .detailbox .col-select .ui-number {
+  border: 1px solid #ddd;
+  text-align: center;
+  display: inline-block;
+}
+/* line 124, ../sass/detail.scss */
+.content .detailbox .col-select .ui-number button, .content .detailbox .col-select .ui-number input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: center;
+}
+/* line 125, ../sass/detail.scss */
+.content .detailbox .col-select .ui-number button {
+  width: 2.25rem;
+  height: 1.925rem;
+}
+/* line 126, ../sass/detail.scss */
+.content .detailbox .col-select .ui-number input {
+  width: 3.5rem;
+  height: 1.75rem;
+}
+/* line 129, ../sass/detail.scss */
+.content .detailbox .col-last {
+  border: none;
+}
+/* line 132, ../sass/detail.scss */
+.content .detailbox .desc {
+  margin-top: 10px;
+  padding: 3%;
+  background: #fff;
+}
+/* line 136, ../sass/detail.scss */
+.content .detailbox .desc h2 {
+  line-height: 2rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: bolder;
+}
+/* line 141, ../sass/detail.scss */
+.content .detailbox .desc .descbox {
+  margin-top: 10px;
+}

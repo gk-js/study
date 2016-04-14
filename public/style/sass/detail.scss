@@ -1,0 +1,146 @@
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@import "var";
+
+body {
+	background: #F0EFF4;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(255,255,255,.9);
+	min-height: 44px;
+	line-height: 44px;
+	border-bottom: 1px solid #ddd;
+	z-index: 50;
+	@include flexbox((display: box), $version: 1);
+    @include flexbox((display: flexbox), $version: 2);
+    @include flexbox((display: flex));
+	.backbutton { 
+		width: 13%; 
+		text-align: center; 
+		color: $mainColor;
+		display: block;
+		font-size: 1.75rem!important;
+	}
+	.cartbutton { @extend .backbutton; 
+		position: relative;
+		.cartnum {
+			position: absolute;
+			left: 50%;
+			bottom: 37%;
+			display:block;
+			width: 20px;
+			height: 20px;
+			@include border-radius(50%);
+			background: $mainColor;
+			color:#fff;
+			font-size: 0.875rem;
+			line-height: 20px;
+			border: 2px solid #fff;
+		}
+	}
+	h1 { 
+		text-align: center; 
+		color: $mainColor;
+		width: 74%;
+		font-size: 1.25rem;
+		font-weight: bolder;
+	}
+}
+.content {
+	padding-top: 44px;
+	padding-bottom: 50px;
+	.bannerImg{
+		width: 100%;
+		position: relative;
+		margin-bottom: 1rem;
+		.index-icon {
+			position: absolute;
+			left: 0;
+			bottom: 10px;
+			text-align: center;
+			width: 100%;
+			i { 
+				display: inline-block; 
+				width: 10px; 
+				height: 10px;
+				background:#6a6666;
+				margin-right: 5px;
+				@include border-radius(50%);
+			}
+			.curr {
+			 	background:$mainColor;
+			} 
+		}
+	}
+	.detailbox {
+		.specification{
+			padding: 3%;
+			background: #fff;
+		}
+		.col-item {
+			padding: 0.875rem 0;
+			border-bottom: 1px solid #ddd;
+			@include legacy-pie-clearfix();
+			font-size: 1rem;
+			font-weight: bolder;
+		}
+		.col-select {
+			font-size: 0.875rem;
+			font-weight: normal;
+			@include flexbox((display: box), $version: 1);
+    		@include flexbox((display: flexbox), $version: 2);
+    		@include flexbox((display: flex));
+			.sizetit { 
+				width: 3.5rem; 
+				line-height: 1.75rem; 
+				text-align: center;
+			}
+			.sizelist {
+				li { 
+					display: inline-block; 
+				}
+				.item {
+					float: left;
+					line-height: 1.75rem;
+					padding: 0 0.75rem;
+					border: 1px solid #ddd;
+					margin: 0 10px 5px 0;
+				}
+				.item.curr {
+					border-color: $mainColor;
+					background: $mainColor;
+					color:#fff;
+				}
+			}
+			.ui-number {
+				border: 1px solid #ddd;
+				text-align: center;
+				display: inline-block;
+				button,input { padding:0; margin: 0; border: none; text-align: center; }
+				button { width: 2.25rem; height: 1.925rem; }
+				input { width: 3.5rem; height: 1.75rem; }
+			}
+		}
+		.col-last {
+			border:none;
+		} 
+		.desc {
+			margin-top: 10px;
+			padding:3%;
+			background: #fff;
+			h2 {
+				line-height: 2rem;
+				border-bottom: 1px solid #ddd;
+				font-weight: bolder;
+			}
+			.descbox {
+				margin-top: 10px;
+			}
+		}
+	}
+}

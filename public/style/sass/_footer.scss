@@ -1,0 +1,65 @@
+@import "compass/css3";
+@import "icon";
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #e1e1e1;
+    background: rgba(255, 255, 255, .9);
+    z-index: 100;
+    ul {
+        @include flexbox((display: box), $version: 1);
+        @include flexbox((display: flexbox), $version: 2);
+        @include flexbox((display: flex));
+        width: 100%;
+    }
+}
+.menuitem {
+    margin-top: 5px;
+    width: 20%;
+    text-align: center;
+    font-size: 0.75rem;
+    flex: 1;
+    a {
+        color: #666;
+        p {
+            line-height: 1.5rem
+        }
+    }
+    .iconfont {
+        font-size: 20px;
+    }
+}
+
+.menuitem.curr {
+    color: #e3393c;
+    a {
+        color: #e3393c;
+    }
+}
+.menuitem.sec {
+    .iconfont {
+        font-size: 19px;
+    }
+    p {
+        margin-top: 1px;
+    }
+}
+.center {
+    margin-top: -22px;
+    span {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        border: 1px solid #bebebe;
+        @include border-radius(50%);
+        background: #fff;
+    }
+    .iconfont {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,182 @@
+/* 首页样式 */
+@import "compass/css3";
+@import "_var";
+
+body {
+	background:#ecf0f1;
+}
+.content {
+	padding-bottom: 70px;
+}
+.banner {
+	width: 100%;
+	position: relative;
+	min-height: 100px;
+	img {
+		vertical-align: top;
+	}
+	.index-icon {
+		position: absolute;
+		left: 0;
+		bottom: 10px;
+		text-align: center;
+		width: 100%;
+		i { 
+			display: inline-block; 
+			width: 10px; 
+			height: 10px;
+			background:#6a6666;
+			margin-right: 5px;
+			@include border-radius(50%);
+		 }
+		 .curr {
+		 	background:$mainColor;
+		 } 
+	}
+}
+.suggest-title-list { 
+	margin-top: 5px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.suggest-title-list2{
+	margin-bottom: 10px;
+}
+.content-container {
+	width: 100%;
+	margin-bottom: 5px;
+	@include flexbox((display: box), $version: 1);
+    @include flexbox((display: flexbox), $version: 2);
+    @include flexbox((display: flex));
+	.col {
+		width: 50%;
+		height: 100%;
+		position: relative;
+	}
+	.col-l {
+		&:after {
+		    height: 100%;
+		    content: '';
+		    width: 1px;
+		    border-right: 1px solid #f0f0f0;
+		    position: absolute;
+		    top: 0;
+		    right: -1px;
+		    @include transform(scaleX(.5));
+		    z-index: 10;
+		}
+	}
+	.col-bottom {
+		margin-top: 1px;
+	}
+	img { 
+		width: 100%;
+		display: block;
+	}
+}
+.conent-suggest {
+	@at-root .suggest-title { padding:0 10px; height:50px; line-height: 50px; background:#fff; 
+		h2 {
+			line-height: 50px;
+			color: $mainColor;
+			font-size: 1.125rem;
+			display: inline;
+		}
+		.more {
+			float: right;
+			text-decoration: none;
+			color: #666;
+			font-size: 0.75rem;
+			&:hover {
+				color: $mainColor;
+			}
+		}
+	}
+	.goodlist {
+		padding: 2%;
+		.item-col {
+			display: inline-block;
+			width: 46%;
+			margin: 1.5%;
+			background:#fff;
+			@include single-box-shadow(0,0,3px,0px,rgba(0,0,0,0.35));
+			p {
+				line-height: 1.5rem;
+				padding: 0 5px;
+			}
+			.title {
+				font-size: 0.875rem;
+				color: #666;
+			}
+			.price {
+				color: $mainColor;
+				strong{
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+}
+.sale-order {
+		.itemlist {
+			.item {
+				padding: 1% 2%;
+				background: #fff;
+				margin-bottom: 5px;
+				a {
+					width: 100%;
+					display: block;
+					@include flexbox((display: box), $version: 1);
+    				@include flexbox((display: flexbox), $version: 2);
+    				@include flexbox((display: flex));
+    			}
+				.col-mainpic {
+					width: 30%;
+					position: relative;
+					.index {
+						position: absolute;
+						left: 0;
+						top: 5px;
+						width: 20px;
+						line-height: 20px;
+						@include border-radius(50%);
+						text-align: center;
+						color:#fff;
+						font-size: 0.75rem;
+						background: #dcdcdc;
+					}
+					.index.before {
+						background: #5999fd;
+					}
+					img { vertical-align: top; }
+				}
+				.col-desc {
+					margin-left: 7%;
+					width: 63%;
+					.title {
+						margin: 10px 0;
+						max-height: 3rem;
+						line-height: 1.5rem;
+						color: #333;
+
+					}
+					.price {
+						color:$mainColor;
+						line-height: 1.5rem;
+						b { font-weight: bolder; }
+					}
+					.soldnum {
+						font-size: 0.875rem;
+						line-height: 1.5rem;
+						color:lighten(#666,10%);
+					}
+				}
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+.swiper-pagination-bullet-active {
+	background: $mainColor!important;
+}

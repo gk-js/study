@@ -1,0 +1,281 @@
+/* line 7, ../sass/list.scss */
+body {
+  background: #ecf0f1;
+}
+
+/* line 10, ../sass/list.scss */
+.headbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 20, ../sass/list.scss */
+.headbar .menubutton, .headbar .searchbutton {
+  width: 16%;
+  text-align: center;
+  line-height: 55px;
+  position: relative;
+}
+/* line 25, ../sass/list.scss */
+.headbar .menubutton i, .headbar .searchbutton i {
+  color: #e3393c;
+  font-size: 20px;
+}
+/* line 29, ../sass/list.scss */
+.headbar .menubutton a, .headbar .searchbutton a {
+  display: block;
+  width: 100%;
+}
+/* line 39, ../sass/list.scss */
+.headbar .grounpList {
+  width: 68%;
+}
+/* line 41, ../sass/list.scss */
+.headbar .grounpList .col {
+  float: left;
+  width: 25%;
+  text-align: center;
+  line-height: 55px;
+  height: 55px;
+}
+/* line 47, ../sass/list.scss */
+.headbar .grounpList .col a {
+  display: block;
+  width: 100%;
+  color: #666;
+}
+/* line 54, ../sass/list.scss */
+.headbar .grounpList .col.curr a {
+  color: #e3393c;
+}
+
+/* line 60, ../sass/list.scss */
+.pagenav {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: left;
+}
+/* line 71, ../sass/list.scss */
+.pagenav .col-group {
+  border-bottom: 1px solid #666;
+  box-sizing: border-box;
+}
+/* line 74, ../sass/list.scss */
+.pagenav .col-group a {
+  padding: 2% 5%;
+  line-height: 250%;
+  color: #fff;
+  display: block;
+}
+
+/* line 82, ../sass/list.scss */
+.searchbox {
+  display: none;
+  position: absolute;
+  width: 625%;
+  right: 0;
+  top: 57px;
+  background: #ccc;
+}
+/* line 89, ../sass/list.scss */
+.searchbox .inputbox {
+  padding: 1rem;
+  box-sizing: border-box;
+  *zoom: 1;
+}
+/* line 22, c:/Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.searchbox .inputbox:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 93, ../sass/list.scss */
+.searchbox .inputbox input {
+  padding: 0;
+  height: 100%;
+  display: inline-block;
+  border: none;
+  float: left;
+  height: 38px;
+}
+/* line 102, ../sass/list.scss */
+.searchbox .inputbox input[type=text] {
+  padding: 0 1%;
+  width: 76%;
+  text-align: left;
+  margin-right: 2px;
+}
+/* line 108, ../sass/list.scss */
+.searchbox .inputbox input[type=submit] {
+  width: 20%;
+  background: #fff;
+  text-align: center;
+  font-size: 24px !important;
+  color: #ccc;
+}
+
+/* line 117, ../sass/list.scss */
+.content {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+/* line 120, ../sass/list.scss */
+.content .goodslist {
+  padding: 2%;
+  min-height: 65vh;
+}
+/* line 123, ../sass/list.scss */
+.content .goodslist .item {
+  display: inline-block;
+  background: #fff;
+  margin: 1.5%;
+  width: 46%;
+  -moz-box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+}
+/* line 129, ../sass/list.scss */
+.content .goodslist .item p {
+  line-height: 1.5rem;
+  padding: 0 5px;
+}
+/* line 133, ../sass/list.scss */
+.content .goodslist .item .title {
+  font-size: 0.875rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+/* line 138, ../sass/list.scss */
+.content .goodslist .item .price {
+  color: #e3393c;
+}
+/* line 140, ../sass/list.scss */
+.content .goodslist .item .price strong {
+  font-weight: bolder;
+}
+/* line 146, ../sass/list.scss */
+.content .more {
+  display: block;
+  height: 50px;
+  border: 1px solid #cbcbcb;
+  margin: 20px 4%;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  color: #333;
+  -moz-box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.35);
+  font-weight: bolder;
+}
+
+/* line 159, ../sass/list.scss */
+.pagenavtion {
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 163, ../sass/list.scss */
+.pagenavtion a {
+  color: #666;
+  font-size: 0.875rem;
+}
+/* line 167, ../sass/list.scss */
+.pagenavtion .before {
+  position: relative;
+}
+/* line 169, ../sass/list.scss */
+.pagenavtion .before:before {
+  content: '';
+  position: absolute;
+  display: block;
+  border: solid #5e5e5e;
+  border-width: 1px 0 0 1px;
+  width: 10px;
+  height: 10px;
+  left: -15px;
+  top: 3px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 182, ../sass/list.scss */
+.pagenavtion .after {
+  position: relative;
+}
+/* line 184, ../sass/list.scss */
+.pagenavtion .after:after {
+  content: '';
+  position: absolute;
+  display: block;
+  border: solid #5e5e5e;
+  border-width: 1px 0 0 1px;
+  width: 10px;
+  height: 10px;
+  top: 3px;
+  right: -15px;
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+/* line 197, ../sass/list.scss */
+.pagenavtion .pageselect {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+  background: filter-gradient(#f7f7f7, #efefef);
+}
+/* line 202, ../sass/list.scss */
+.pagenavtion .pageselect p {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #aaaaaa;
+  line-height: 30px;
+  text-align: center;
+  background: #ddd;
+}
+/* line 209, ../sass/list.scss */
+.pagenavtion .pageselect p:after {
+  content: '';
+  display: inline-block;
+  border: solid #5e5e5e;
+  border-width: 1px 0 0 1px;
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  margin-top: -2px;
+  transform: rotate(-135deg) translatey(5px);
+  -webkit-transform: rotate(-135deg) translatey(5px);
+}
+/* line 223, ../sass/list.scss */
+.pagenavtion .pageselect select {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  height: 30px;
+}
