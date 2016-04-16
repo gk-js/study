@@ -6,8 +6,8 @@ var config = {
 	password: 'root',
 	database: 'shop'
 }
-var connection
-function handleDisconnect(){
+var connection,res;
+function handleDisconnect(sql, callback){
 	connection = mysql.createConnection(config);
 	connection.connect(function(err){
 		if(err){
@@ -18,15 +18,18 @@ function handleDisconnect(){
 	connection.on('error', function(err){
 		console.log('there is an error' + err);
 		if(err.code === 'PROTOCOL_CONNECTION_LOST'){
-			handleDisconnect();
+			handleDisconnect(sql);
 		}else{
 			throw err;
 		}
 	});
-	connection.query('SELECT * FROM products', function(err, rows){
-		console.log(rows);
+	var query = connection.query(sql, function(err, rows){
+		res = rows;
+		return callback(rows);
 	});
+	connection.end();
+    // return res;
 }
-handleDisconnect();
+module.exports = handleDisconnect;
 
 
