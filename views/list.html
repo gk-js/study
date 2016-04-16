@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>莲香岛商城</title>
+	<title>{{ title }}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/common.css">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/list.css">
+	<link rel="stylesheet" type="text/css" href="/style/stylesheets/common.css">
+	<link rel="stylesheet" type="text/css" href="/style/stylesheets/list.css">
 </head>
 <body>
 	<div class="headbar">
@@ -40,31 +40,13 @@
 	</div>
 	<div class="content">
 		<ol class="goodslist">
-			<li class="item"><a href="">
-					<img src="userimg/userimg3.jpg" alt="" width="100%">
-					<p class="title">雪莲女人滋养贴（200片）</p>
-					<p class="price">&yen;<strong>399</strong></p>
+			{{ each products }}
+			<li class="item"><a href="/products/{{ $value.id }}" title="{{ $value.title }}">
+					<img src="{{ $value.img }}" alt="" width="100%">
+					<p class="title">{{ $value.title }}</p>
+					<p class="price">&yen;<strong>{{ $value.price }}</strong></p>
 				</a></li>
-			<li class="item"><a href="">
-					<img src="userimg/userimg3.jpg" alt="" width="100%">
-					<p class="title">雪莲女人滋养贴（200片）</p>
-					<p class="price">&yen;<strong>399</strong></p>
-				</a></li>
-			<li class="item"><a href="">
-					<img src="userimg/userimg3.jpg" alt="" width="100%">
-					<p class="title">雪莲女人滋养贴（200片）</p>
-					<p class="price">&yen;<strong>399</strong></p>
-				</a></li>
-			<li class="item"><a href="">
-					<img src="userimg/userimg3.jpg" alt="" width="100%">
-					<p class="title">雪莲女人滋养贴（200片）</p>
-					<p class="price">&yen;<strong>399</strong></p>
-				</a></li>
-			<li class="item"><a href="">
-					<img src="userimg/userimg3.jpg" alt="" width="100%">
-					<p class="title">雪莲女人滋养贴（200片）</p>
-					<p class="price">&yen;<strong>399</strong></p>
-				</a></li>
+			{{ /each }}
 		</ol>
 		<a href="" class="more">查看更多</a>
 	</div>

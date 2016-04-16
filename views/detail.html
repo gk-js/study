@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>莲香岛商城</title>
+	<title>{{ product.title }}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/common.css">
-	<link rel="stylesheet" type="text/css" href="style/stylesheets/detail.css">
+	<link rel="stylesheet" type="text/css" href="/style/stylesheets/common.css">
+	<link rel="stylesheet" type="text/css" href="/style/stylesheets/detail.css">
 </head>
 <body>
 	<header>
@@ -16,13 +16,13 @@
 	<div class="content">
 		<div class="bannerImg">
 			<ul>
-				<li><img src="userimg/userimg3.jpg" alt="" width="100%"></li>
+				<li><img src="{{ product.img }}" alt="" width="100%"></li>
 			</ul>
-			<p class="index-icon">
+			<!--<p class="index-icon">
 				<i class="curr"></i>
 				<i></i>
 				<i></i>
-			</p>
+			</p>-->
 		</div>
 		<section class="detailbox">
 			<div class="specification">
@@ -30,7 +30,7 @@
 				<div class="col-item col-select">
 					<h2 class="sizetit">产品：</h2>
 					<ul class="sizelist">
-						<li class="item curr">净牌雪莲女人贴</li>
+						<li class="item curr">{{ product.title }}</li>
 					</ul>
 				</div>
 				<div class="col-item col-select">
@@ -59,7 +59,9 @@
 			</div>
 			<div class="desc">
 					<h2>商品信息</h2>
-					<div class="descbox"></div>
+					<div class="descbox">
+						{{ product.detail }}
+					</div>
 				</div>
 		</section>
 	</div>
