@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var template = require('art-template');
+var crypto = require('crypto');
+var user = require('./models/user');
 
 var routes = require('./routes/index');
 var products = require('./routes/products');
@@ -31,7 +33,37 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/products', products);
-// app.use('/products/:id', detail);
+app.use('/login', function(req, res, next){
+    res.render('login', {
+      title : '商城登录'
+    })
+});
+app.get('/register', function(req, res, next){
+    res.render('register', {
+      title : '商城注册'
+    })
+});
+app.post('/register', function(req, res, next){
+    var userName = req.body.user,
+        password = req.body.password,
+        re_password = req.body.re_password;
+    if(password != re_password){
+        return;
+    }
+    var md5 = crypto.createHash('md5'),
+        password = md5.update(req.body.password).digest('hex');
+    var newUser = new user({
+        userName: userName,
+        password: password
+    });
+    newUser.save(function(rows){
+        if(rows.affectedRows > 0){
+            return res.redirect('/');
+        }else{
+          //注册失败
+        }
+    })
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
