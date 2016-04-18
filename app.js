@@ -7,10 +7,12 @@ var bodyParser = require('body-parser');
 var template = require('art-template');
 var crypto = require('crypto');
 var user = require('./models/user');
+var db = require('./models/db');
 
 var routes = require('./routes/index');
 var products = require('./routes/products');
 var detail = require('./routes/detail');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -33,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/products', products);
-app.use('/login', function(req, res, next){
+app.get('/login', function(req, res, next){
     res.render('login', {
       title : '商城登录'
     })
@@ -61,6 +63,22 @@ app.post('/register', function(req, res, next){
             return res.redirect('/');
         }else{
           //注册失败
+        }
+    })
+});
+
+app.post('/login',  function(req, res){
+    var userName = req.params.userName,
+        password = req.params.password;
+    db('SELECT * FROM USER WHERE userName='+ userName +'',function (rows){
+        if(rows.length > 0){
+            var password_Fource = md5.update(password).digest('hex');
+            if(password_Fource === rows[0].password){
+                //登录成功
+            }
+        }else{
+            //用户不存在
+            return;
         }
     })
 });
